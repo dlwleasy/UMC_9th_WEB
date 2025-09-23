@@ -38,11 +38,11 @@ const renderTasks = (): void => {
 // 5) 할 일 추가
 const addTodo = (text: string): void => {
   todos.push({ id: Date.now(), text });
-  todoInput.value = "";
+  todoInput.value = ""; //칸에서 입력값 지우기
   renderTasks();
 };
 
-// 6) 완료로 이동
+// 6) 완료로 이동 -> 완료버튼을 누를 시
 const completeTask = (todo: Todo): void => {
   todos = todos.filter((t) => t.id !== todo.id); // 선택한 것 제외
   doneTasks.push(todo); // 완료 배열로 이동
@@ -58,7 +58,7 @@ const deleteDone = (todo: Todo): void => {
 // (선택) 미완료에서 삭제가 필요하면 이 함수도 추가
 const deleteTodo = (todo: Todo): void => {
   todos = todos.filter((t) => t.id !== todo.id);
-  renderTasks();
+  renderTasks(); //삭제화면과 똑같은 로직으로 작성해주면 됨
 };
 
 // 8) li 아이템 생성
