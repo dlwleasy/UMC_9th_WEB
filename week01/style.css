@@ -32,7 +32,7 @@ body {
   margin-bottom: 16px;
 }
 
-.todo-container__input {
+.todo-container__form__input {
   flex: 1;
   padding: 8px;
   border: 1px solid #e6e6e6;
@@ -40,17 +40,17 @@ body {
   font-size: 14px;
 }
 
-.todo-container__button {
+.todo-container__form__button {
   padding: 8px 12px;
   background-color: #28a745;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.5s ease;
 }
 
-.todo-container__button:hover {
+.todo-container__form__button:hover {
   background-color: #218838;
 }
 
